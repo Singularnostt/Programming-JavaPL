@@ -5,22 +5,14 @@ import java.io.*;
 public class Main {
 
 	public static void main(String[] args)
-		throws IOException
+	throws IOException
 	{
-
-		double a, b, pole;
-
+		Double a,b,c,d;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Zegar zegar = new Zegar();
 
-		System.out.println("Program oblicza pole prostok¹ta.");
-		System.out.println("Podaj bok a.");
-		a = Double.parseDouble(br.readLine());
-		System.out.println("Podaj bok a. ");
-		b = Double.parseDouble(br.readLine());
-		pole = a * b;
 
-		System.out.print("Pole prostok¹t¹ o boku a = " + a + " i boku b = " + b);
-		System.out.println(" wynosi " + pole + ".");
+        System.out.println(zegar);
 	}
 
 }
