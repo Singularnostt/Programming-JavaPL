@@ -17,6 +17,8 @@ public class Main {
         Zegar zegar = new Zegar();
         
         zegar.oblicz(a,b,c,d);
+        zegar.oblicz(a,b,c,d);
+        zegar.oblicz(a,b,c,d);
 
         System.out.println(zegar);
 	}
