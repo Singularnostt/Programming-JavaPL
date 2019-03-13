@@ -1,56 +1,96 @@
 package com.ap.valiaiev;
 
-import java.util.*;
-
 public class Zegar {
-	
-		public ArrayList<Integer> oblicz(int a, int b, int c, int d)
+
+	public String oblicz(int a, int b, int c, int d) {
+		int[] arr = { a, b, c, d };
 		
-		{
-			int n=4;
-			ArrayList<Integer> numberList = new ArrayList<>();
-			numberList.add(a);
-			numberList.add(b);
-			numberList.add(c);
-			numberList.add(d);
-			
-			Collections.sort(numberList);	
-//			Collections.reverse(numberList);
-			
-			if(numberList.get(0)<=2)
-			{
-				if(numberList.get(1)<=4)
-				{
-					if(numberList.get(2)<=5)
-					{
-						if(numberList.get(3)<=9)
-						{
-							for (int i = 0; i < numberList.size(); i++) {
-							     
-							   
-							}
-				        }  
-							System.out.println("Zegar" + numberList);
-						}
-						else 
-						{
-							System.out.println("To nie jest zegar");
-						}
-					}
-					else 
-					{
-						System.out.println("To nie jest zegar");
-					}
-				}
-				else 
-				{
-					System.out.println("To nie jest zegar");
-				}
+		int out2 = 0;
+		int iout2 = -1;
+		String out = new String();
+		
+		for (int i = 0; i < 4; i++) {
+			if (arr[i] <= 2 && arr[i] >= out2) {
+					iout2 = i;			
 			}
-			else
-			{
-				System.out.println("To nie jest zegar");
-			}
-			return numberList;
 		}
+		
+		if (iout2 == -1) {
+			out2 = 11;
+		}
+		else {
+		out2 = arr[iout2];
+		arr[iout2] = -1;
+		}
+		
+		out+=out2;
+		
+		out2 = 0;
+		iout2 = -1;
+		for (int i = 0; i < 4; i++) {
+			if (arr[i] <= 3 && arr[i] >= out2) {
+					iout2 = i;			
+			}
+		}
+		
+		if (iout2 == -1) {
+			out2 = 11;
+		}
+		else {
+		out2 = arr[iout2];
+		arr[iout2] = -1;
+		}
+		out+=out2;
+		out+=":";
+		out2 = 0;
+		iout2 = -1;
+		
+		
+		for (int i = 0; i < 4; i++) {
+			if (arr[i] <= 5 && arr[i] >= out2) {
+					iout2 = i;			
+			}
+		}
+		
+		if (iout2 == -1) {
+			out2 = 11;
+		}
+		else {
+		out2 = arr[iout2];
+		arr[iout2] = -1;
+		}
+		out+=out2;
+		out2 = 0;
+		iout2 = -1;
+		
+		
+		for (int i = 0; i < 4; i++) {
+			if (arr[i] <= 9 && arr[i] >= out2) {
+					iout2 = i;			
+			}
+		}
+		
+		if (iout2 == -1) {
+			out2 = 11;
+		}
+		else {
+		out2 = arr[iout2];
+		arr[iout2] = -1;
+		}
+		
+		out+=out2;
+		
+		
+		
+		
+		if (out . length() == 5) {
+			System.out.println(out);
+		}
+		else {
+			System.out.println("error");
+		}
+		
+		return null;
+	}
+
 }
