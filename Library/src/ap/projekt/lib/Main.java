@@ -15,7 +15,7 @@ public class Main {
 			choice = scanner.nextInt();
 			switch (choice) {
 			case 1:
-				System.out.println("dodoaj ksi¹¿kê");
+				System.out.println("dodaj ksi¹¿kê");
 				biblioteka.AddBook();
 				break;
 			case 2:
@@ -42,7 +42,7 @@ public class Main {
 	private static void menu() {
 		System.out.println("Witamy w bibliotece");
 		System.out.println("Wybierz:");
-		System.out.println("1: Zrob cos");
+		System.out.println("1: take new book");
 		System.out.println("2: Zrob cos");
 		System.out.println("3: Zrob cos");
 		System.out.println("4: Zrob cos");
